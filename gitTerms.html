@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Related Terms</title>
+    <style>
+        body {
+            max-width: 1024px;
+            height: auto;
+            margin: auto;
+        }
+
+        h3 {
+            margin-top: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(0, 0, 158);
+        }
+
+        a:hover {
+            color: rgb(0, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Git Related Terms</h1>
+    <h2>WDV - 341</h2>
+
+    <ol>
+        <li><strong>Version Control Software:</strong> The tracking and managing of changes made to software code.
+            Records changes to files over time so that specific versions later can be recalled. Can allow you to revert
+            selected files back to a previous state, revert an entire project back to a previous state, compare any
+            changes made over time, see who last modified something, and more.</li>
+        <br>
+        <li><strong>Add:</strong> The add command is used to add important file contents to the index. You must use the add
+            command to add any new or modified files to the index in order to update the index with current content and
+            to prepare the content staged for the next commit. Can be preformed multiple times before a commit. Will
+            only add content of the specified files at the time the add command is run. This command with committing
+            give developers total control over the history of a project without changing how they code/work.</li>
+        <br>
+        <li><strong>Commit:</strong> The commit command is used to record changes to the repository. For reference, its
+            like a captured snapshot of the projects currently staged changes. You will have to explicitly tell Git
+            which changes you want to include in a commit before running the 'git commit' command. Use -m to track why you saved a copy of the page.</li>
+        <br>
+        <li><strong>Push:</strong> Used to update a remote branch (copy of original branch) with the commits made to the
+            current branch. You are essentially "pushing" your changes onto the remote. Use when ready to upload, save, or backup files from local computer to the remote repository/folder. This command will only work on files that you 'add' to the local repo and that you 'commit' to the local repo.</li>
+        <br>
+        <li><strong>Pull/Pull Requests:</strong> This command is used to fetch from and integrate with another
+            repository or a local branch. Essentially it will incorporate changes from a remote repository into the
+            current branch. For example, if someone had changed code on a separate branch of a project and wants it to
+            be reviewed to add to the master branch, they can then put in a pull request. Used to reflect changes
+            someone has made in their local environment.</li>
+        <br>
+        <li><strong>Clone:</strong> Like the name suggests, it will clone a repository into a newly created directory.
+            When cloning a repository into another branch, the new branch becomes a remote-tracking branch that can talk
+            upstream to its origin branch. The clone will include all the projects files, history, and branches.</li>
+    </ol>
+
+    <h3>Refrences and resources:</h3>
+    <a href="https://git-scm.com/docs" target="_blank">Git reference</a>
+    <br>
+    <a href="https://www.w3schools.com/git/" target="_blank">W3schools Git tutorial</a>
+    <br>
+    <a href="https://docs.github.com/en/get-started/using-git/about-git" target="_blank">Github Docs</a>
+
+
+</body>
+
+</html>
