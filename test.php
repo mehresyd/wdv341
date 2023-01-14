@@ -51,6 +51,6 @@
     <p>Your curretn city is registered as:  <?php echo $city ?></p>
 
 
-    <p>Delivered <?php echo "Your package was delivered to $city"; ?>
+    <p>Delivered <?php echo "Your package was delivered to $city"; ?></p>
 </body>
 </html>
