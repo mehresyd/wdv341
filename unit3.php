@@ -1,3 +1,12 @@
+<?php 
+     $yourName = "Sydney";
+     $assignmentName = "3-1: PHP Basics";
+     $languages = array("PHP", "HTML", "Javascript");
+     foreach($languages as $value) {
+     }
+     $languages = json_encode($languages);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,21 +16,14 @@
     <title>3-1 PHP Basics</title>
     <script>
 
-        let assignmentName = "3-1: PHP Basics";
-
         let number1 = 2;
         let number2 = 4;
         let total = number1 + number2;
 
-        <?php 
-            echo $yourName = "Sydney";
-        ?>
-
-
     </script>
 </head>
 <body>
-    <h1><script>document.write(assignmentName);</script></h1>
+    <h1><?php echo htmlspecialchars("<h1>") . $assignmentName . htmlspecialchars("</h1>"); ?></h1>
     
     <h2> <?php echo "$yourName"; ?> </h2>
 
@@ -29,13 +31,13 @@
     <p>Second Number: <script>document.write(number2);</script></p>
     <p>Total: <script>document.write(total);</script></p>
 
-    <?php
-        $languages = array("PHP", "HTML", "Javascript");
-
-        foreach ($languages as $value) {
-            echo "$value <br>";
+    <script>
+        let languages = <?php echo $languages; ?>;
+        for (let i=0; i < languages.length; i++) {
+            document.write(languages[i] + "<br>");
         }
-    ?>
+    </script>
+
     
 </body>
 </html>
