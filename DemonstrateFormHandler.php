@@ -1,3 +1,17 @@
+<?php
+$firstName = $_POST['first_name']; 
+$academicStanding = $_POST['academic_standing'];
+$selectedMajor = $_POST['selected_major']; 
+$emailAddress = $_POST['email_address']; 
+$message = $_POST['message'];
+
+if( isset( $_POST['contact_options']) ) {
+  $options = $_POST['contact_options']; 
+} else{
+  $options = "No selection.";
+}
+
+?>
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -42,15 +56,14 @@ body {
 
 
 <div>
-<p>Dear <?php echo $_POST['first_name']; ?>,</p>
+<p>Dear <?php echo $firstName; ?>,</p>
 <p>Thank you for your interest in DMACC.</p>
-<p>We have you listed as an <?php echo $_POST['academic_standing']; ?> starting this fall.</p>
-<p>You have declared <?php echo $_POST['selected_major']; ?> as your major.</p>
-<p>Based upon your responses we will provide the following information in our confirmation email to you at <?php echo $_POST['email_address']; ?>.</p>
-<p><?php echo $_POST['contact_options']; ?></p>
-<p><?php echo $_POST['contact_options']; ?></p>
+<p>We have you listed as an <?php echo $academicStanding; ?> starting this fall.</p>
+<p>You have declared <?php echo $selectedMajor; ?> as your major.</p>
+<p>Based upon your responses we will provide the following information in our confirmation email to you at <?php echo $emailAddress; ?>.</p>
+<p><?php echo $options; ?></p>
 <p>You have shared the following comment which we will review:</p>
-<p><?php echo $_POST['message']; ?></p>
+<p><?php echo $message; ?></p>
 </div>
 
 </body>
