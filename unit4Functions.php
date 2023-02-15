@@ -7,13 +7,9 @@ $usDollars = 123456;
 
 
 
-function getMDYFormat($timestamp) {
-return date("m/d/Y", $timestamp);
+function getDateFormat($timestamp, $format) {
+return date($format, $timestamp);
     
-}
-
-function getDMYFormat($timestamp) {
-return date("d/m/Y", $timestamp);
 }
 
 function displayStringInput($string) {
@@ -56,8 +52,8 @@ function formattedCurrency($usDollars) {
 </head>
 <body>
     <h1>4-1: PHP Functions</h1>
-    <p>mm/dd/yyyy format: <?php echo getMDYFormat($timestamp);?></p>
-    <p>dd/mm/yyyy format: <?php echo getDMYFormat($timestamp);?></p>
+    <p>mm/dd/yyyy format: <?php echo getDateFormat($timestamp, "m/d/Y");?></p>
+    <p>dd/mm/yyyy format: <?php echo getDateFormat($timestamp, "d/m/Y");?></p>
     <?php echo displayStringInput($string);?>
     <p>Number displayed as formatted phone number: <?php echo formattedNumber($phoneNumber);?></p>
     <p>Number displayed as formatted US currency: <?php echo formattedCurrency($usDollars);?></p>
